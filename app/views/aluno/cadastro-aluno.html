@@ -1,39 +1,35 @@
 <st-crud titulo="vm.titulo"
          tipo="primary"
-    service="vm.stService">
+         service="vm.stService">
     <st-crud-body>
-        <form salvar="vm.salvar()">
-            <div>
-                <st-input-text label="Nome"
-                               ng-model="vm.aluno.nome"
-                               ng-required="true">
-                </st-input-text>
+        <st-input-text label="Nome"
+                       ng-model="vm.aluno.nome"
+                       ng-required="true">
+        </st-input-text>
 
-                <st-input-text label="Responsável"
-                               ng-model="vm.aluno.responsavel"
-                               ng-required="true">
-                </st-input-text>
+        <st-input-text label="Responsável"
+                       ng-model="vm.aluno.responsavel"
+                       ng-required="true">
+        </st-input-text>
 
-                <st-input-text label="CPF Responsável"
-                               ng-model="vm.aluno.cpfResponsavel"
-                               ng-required="true">
-                </st-input-text>
+        <st-input-text label="CPF Responsável"
+                       ng-model="vm.aluno.cpfResponsavel"
+                       ng-required="true">
+        </st-input-text>
 
-                <st-input-text label="Telefone"
-                               ng-model="vm.aluno.telefone"
-                               ng-required="true">
-                </st-input-text>
+        <st-input-text label="Telefone"
+                       ng-model="vm.aluno.telefone"
+                       ng-required="true">
+        </st-input-text>
 
-                <st-input-text label="Instituição"
-                               ng-model="vm.aluno.instituicao"
-                               ng-required="true">
-                </st-input-text>
+        <st-input-text label="Instituição"
+                       ng-model="vm.aluno.instituicao"
+                       ng-required="true">
+        </st-input-text>
 
-                <st-input-text label="Turno"
-                               ng-model="vm.aluno.turno"
-                               ng-required="true">
-                </st-input-text>
-            </div>
-        </form>
+        <st-input-text label="Turno"
+                       ng-model="vm.aluno.turno"
+                       ng-required="true">
+        </st-input-text>
     </st-crud-body>
 </st-crud>

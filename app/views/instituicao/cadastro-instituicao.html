@@ -3,12 +3,10 @@
          service="vm.stService">
     <st-crud-body>
         <form name="{{templateFormName}}">
-            <div>
-                <st-input-text label="Nome"
-                               ng-model="vm.instituicao.nome"
-                               ng-required="true">
-                </st-input-text>
-            </div>
+            <st-input-text label="Nome"
+                           ng-model="vm.instituicao.nome"
+                           ng-required="true">
+            </st-input-text>
         </form>
     </st-crud-body>
 </st-crud>
