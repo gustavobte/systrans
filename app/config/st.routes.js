@@ -13,6 +13,14 @@
 			controllerAs: 'vm'
 		};
 
+		const pesquisaAluno = {
+			name: 'pesquisaAluno',
+			url: '/pesquisa-aluno',
+			templateUrl: 'app/views/aluno/pesquisa-aluno.html',
+			controller: 'PesquisaAlunoController',
+			controllerAs: 'vm'
+		};
+
 		const cadastroInstituicao = {
 			name: 'cadastroInstituicao',
 			url: '/cadastro-instituicao',
@@ -21,9 +29,19 @@
 			controllerAs: 'vm'
 		};
 
+		const pesquisaInstituicao = {
+			name: 'pesquisaInstituicao',
+			url: '/pesquisa-instituicao',
+			templateUrl: 'app/views/instituicao/pesquisa-instituicao.html',
+			controller: 'PesquisaInstituicaoController',
+			controllerAs: 'vm'
+		};
+
 		$stateProvider
 			.state('cadastroAluno', cadastroAluno)
-			.state('cadastroInstituicao', cadastroInstituicao);
+			.state('pesquisaAluno', pesquisaAluno)
+			.state('cadastroInstituicao', cadastroInstituicao)
+			.state('pesquisaInstituicao', pesquisaInstituicao);
 
 	}
 })();

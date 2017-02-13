@@ -1,10 +1,10 @@
-<st-crud titulo="vm.titulo"
+<st-crud titulo="vm.stService.tituloPaginaCadastro"
          tipo="primary"
          service="vm.stService">
     <st-crud-body>
         <form name="{{templateFormName}}">
             <st-input-text label="Nome"
-                           ng-model="vm.instituicao.nome"
+                           ng-model="vm.stService.entidade.nome"
                            ng-required="true">
             </st-input-text>
         </form>

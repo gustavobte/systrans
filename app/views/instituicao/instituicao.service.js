@@ -11,12 +11,10 @@
 
 		function getStService() {
 			var ps = new StService('CadastroInstituicaoController');
-
+			ps.tituloPaginaCadastro = "Cadastro de instituição";
+			ps.tituloPaginaPesquisa = "Pesquisa de instituição";
+			ps.nomeKey = 'instituicao';
 			return ps;
 		}
-
-
 	}
-
 })();
-

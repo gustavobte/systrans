@@ -11,7 +11,9 @@
 
 		function getStService() {
 			var ps = new StService('CadastroAlunoController');
-
+			ps.tituloPaginaCadastro = 'Cadastro de aluno';
+			ps.tituloPaginaPesquisa = 'Pesquisa de aluno';
+			ps.nomeKey = 'aluno';
 			return ps;
 		}
 

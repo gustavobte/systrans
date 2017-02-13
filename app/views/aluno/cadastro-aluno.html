@@ -1,34 +1,34 @@
-<st-crud titulo="vm.titulo"
+<st-crud titulo="vm.stService.tituloPaginaCadastro"
          tipo="primary"
          service="vm.stService">
     <st-crud-body>
         <st-input-text label="Nome"
-                       ng-model="vm.aluno.nome"
+                       ng-model="vm.stService.entidade.nome"
                        ng-required="true">
         </st-input-text>
 
         <st-input-text label="Responsável"
-                       ng-model="vm.aluno.responsavel"
+                       ng-model="vm.stService.entidade.responsavel"
                        ng-required="true">
         </st-input-text>
 
         <st-input-text label="CPF Responsável"
-                       ng-model="vm.aluno.cpfResponsavel"
+                       ng-model="vm.stService.entidade.cpfResponsavel"
                        ng-required="true">
         </st-input-text>
 
         <st-input-text label="Telefone"
-                       ng-model="vm.aluno.telefone"
+                       ng-model="vm.stService.entidade.telefone"
                        ng-required="true">
         </st-input-text>
 
         <st-input-text label="Instituição"
-                       ng-model="vm.aluno.instituicao"
+                       ng-model="vm.stService.entidade.instituicao"
                        ng-required="true">
         </st-input-text>
 
         <st-input-text label="Turno"
-                       ng-model="vm.aluno.turno"
+                       ng-model="vm.stService.entidade.turno"
                        ng-required="true">
         </st-input-text>
     </st-crud-body>
