@@ -6,10 +6,13 @@
 		.controller('CadastroInstituicaoController', CadastroInstituicaoController);
 
 	/* @ngInject */
-	function CadastroInstituicaoController() {
+	function CadastroInstituicaoController(InstituicaoService) {
 		var vm = this;
 
 		vm.titulo = "Cadastro de instituição";
+
+		vm.stService = InstituicaoService.getStService();
+
 	}
 
 })();

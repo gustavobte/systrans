@@ -2,6 +2,6 @@
 	'use strict';
 
 	angular
-		.module('stApp', ['ui.router', 'ngMaterial']);
+		.module('stApp', ['ui.router', 'ngMaterial', 'toastr', 'ngMessages']);
 
 })();

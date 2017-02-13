@@ -6,10 +6,12 @@
 		.controller('CadastroAlunoController', CadastroAlunoController);
 
 	/* @ngInject */
-	function CadastroAlunoController() {
+	function CadastroAlunoController(AlunoService) {
 		var vm = this;
 
 		vm.titulo = "Cadastro de aluno";
+
+		vm.stService = AlunoService.getStService();
 	}
 
 })();

@@ -11,12 +11,13 @@
 			templateUrl: 'arquitetura/directives/st-crud/st-crud.template.html',
 			restrict: 'E',
 			scope: {
-				titulo: '@',
+				titulo: '=',
 				tipo: '@',
 				icone: '@',
 				salvar: '@',
 				remover: '@',
-				limpar: '@'
+				limpar: '@',
+				service: '='
 			},
 			transclude: {
 				'header': '?stCrudHeader',

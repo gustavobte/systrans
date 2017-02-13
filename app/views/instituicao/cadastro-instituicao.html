@@ -1,7 +1,8 @@
-<st-crud titulo="Cadastro de instituição"
-         tipo="primary">
+<st-crud titulo="vm.titulo"
+         tipo="primary"
+         service="vm.stService">
     <st-crud-body>
-        <form salvar="vm.salvar()">
+        <form name="{{templateFormName}}">
             <div>
                 <st-input-text label="Nome"
                                ng-model="vm.instituicao.nome"
