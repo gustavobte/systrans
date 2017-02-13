@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="stApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS Internos-->
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="../node_modules/angular-toastr/dist/angular-toastr.css">
+    <link rel="stylesheet" href="views/dashboard/dashboard.style.css">
+    <link rel="stylesheet" href="../node_modules/angular-ui-grid/ui-grid.css">
+    <link rel="stylesheet" href="views/login/materialize.css">
+
+    <!-- CSS Externos -->
+
+    <!-- JS Internos -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="../node_modules/angular-material/angular-material.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.js"></script>
+    <script src="../node_modules/angular-toastr/dist/angular-toastr.js"></script>
+    <script src="../node_modules/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="../node_modules/angular-ui-grid/ui-grid.js"></script>
+    <script src="../node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+
+    <!-- JS Externos Principal-->
+    <script src="config/st-app.module.js"></script>
+    <script src="config/st.routes.js"></script>
+
+    <!-- JS Externos Arquitetura -->
+    <script src="../arquitetura/directives/st-crud/st-crud.directive.js"></script>
+    <script src="../arquitetura/directives/st-input-text/st-input-text.directive.js"></script>
+    <script src="../arquitetura/services/st-alert.services.js"></script>
+    <script src="../arquitetura/services/st-services.js"></script>
+    <script src="../arquitetura/services/st-storage.service.js"></script>
+
+    <!-- JS Views-->
+    <script src="views/aluno/cadastro-aluno.controller.js"></script>
+    <script src="views/aluno/aluno.service.js"></script>
+    <script src="views/instituicao/cadastro-instituicao.controller.js"></script>
+    <script src="views/instituicao/instituicao.service.js"></script>
+    <script src="controller/index.controller.js"></script>
+    <script src="views/aluno/pesquisa-aluno.controller.js"></script>
+    <script src="views/instituicao/pesquisa-instituicao.controller.js"></script>
+
+
+</head>
+<body ng-controller="IndexController as vm">
+
+<nav class="navbar navbar-light bg-faded indigo darken-4">
+    <div class="collapse" id="exCollapsingNavbar">
+        <md-button class="md-icon-button" aria-label="Side Panel" ng-click="vm.openSideNavPanel()">
+            <md-tooltip>Menu</md-tooltip>
+            <md-icon class="white-text material-icons">&#xE5D2;</md-icon>
+        </md-button>
+    </div>
+</nav>
+<div class="row">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+
+        <md-toolbar layout="row" style="height: 200px; background-color: #0D47A1">
+            <div class="md-toolbar-tools blue darken-4">
+                <h2><span>Systrans</span></h2>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="vm.closeSideNavPanel()">
+                    <md-tooltip>Fechar</md-tooltip>
+                    <md-icon class="material-icons">&#xE5CD;</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-content>
+            <md-list>
+                <md-subheader class="md-no-sticky">Protótipo</md-subheader>
+                <md-list-item ng-click="vm.alterarRota('dashboardApp')">
+                    <md-icon class="material-icons">&#xE1AF;</md-icon>
+                    <p >Dashboard</p>
+                </md-list-item>
+                <md-list-item ng-click="vm.alterarRota('cadastroAluno')">
+                    <md-icon class="material-icons">chrome_reader_mode</md-icon>
+                    <p>Cadastro de Aluno</p>
+                    <md-icon class="md-secondary">2</md-icon>
+                </md-list-item>
+                <md-list-item ng-click="vm.alterarRota('cadastroInstituicao')">
+                    <md-icon class="material-icons">find_in_page</md-icon>
+                    <p>Cadastro de Instituição</p>
+                    <md-icon class="md-secondary">2</md-icon>
+                </md-list-item>
+                <md-list-item ng-click="vm.alterarRota('pesquisaAluno')">
+                    <md-icon class="material-icons">find_in_page</md-icon>
+                    <p>Pesquisa Aluno</p>
+                    <md-icon class="md-secondary">2</md-icon>
+                </md-list-item>
+                <md-list-item ng-click="vm.alterarRota('pesquisaInstituicao')">
+                    <md-icon class="material-icons">find_in_page</md-icon>
+                    <p>Pesquisa Instituição</p>
+                    <md-icon class="md-secondary">2</md-icon>
+                </md-list-item>
+
+            </md-list>
+        </md-content>
+    </md-sidenav>
+</div>
+
+
+   <ui-view>
+   </ui-view>
+
+
+
+</body>
+</html>

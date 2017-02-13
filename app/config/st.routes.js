@@ -5,10 +5,18 @@
 	/* @ngInject */
 	function config($stateProvider) {
 
+        const dashboardApp = {
+            name: 'dashboardApp',
+            url: '/dashboard-app',
+            templateUrl: '../app/views/dashboard/dashboard.html'
+            // controller: 'CadastroAlunoController',
+            // controllerAs: 'vm'
+        };
+
 		const cadastroAluno = {
 			name: 'cadastroAluno',
 			url: '/cadastro-aluno',
-			templateUrl: 'app/views/aluno/cadastro-aluno.html',
+			templateUrl: '../app/views/aluno/cadastro-aluno.html',
 			controller: 'CadastroAlunoController',
 			controllerAs: 'vm'
 		};
@@ -16,7 +24,7 @@
 		const pesquisaAluno = {
 			name: 'pesquisaAluno',
 			url: '/pesquisa-aluno',
-			templateUrl: 'app/views/aluno/pesquisa-aluno.html',
+			templateUrl: '../app/views/aluno/pesquisa-aluno.html',
 			controller: 'PesquisaAlunoController',
 			controllerAs: 'vm'
 		};
@@ -24,7 +32,7 @@
 		const cadastroInstituicao = {
 			name: 'cadastroInstituicao',
 			url: '/cadastro-instituicao',
-			templateUrl: 'app/views/instituicao/cadastro-instituicao.html',
+			templateUrl: '../app/views/instituicao/cadastro-instituicao.html',
 			controller: 'CadastroInstituicaoController',
 			controllerAs: 'vm'
 		};
@@ -32,12 +40,13 @@
 		const pesquisaInstituicao = {
 			name: 'pesquisaInstituicao',
 			url: '/pesquisa-instituicao',
-			templateUrl: 'app/views/instituicao/pesquisa-instituicao.html',
+			templateUrl: '../app/views/instituicao/pesquisa-instituicao.html',
 			controller: 'PesquisaInstituicaoController',
 			controllerAs: 'vm'
 		};
 
 		$stateProvider
+    		.state('dashboardApp', dashboardApp)
 			.state('cadastroAluno', cadastroAluno)
 			.state('pesquisaAluno', pesquisaAluno)
 			.state('cadastroInstituicao', cadastroInstituicao)

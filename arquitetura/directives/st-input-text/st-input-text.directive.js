@@ -10,7 +10,7 @@
 		var directive = {
 			restrict: 'E',
 			require: '^form',
-			templateUrl: 'arquitetura/directives/st-input-text/st-input-text.template.html',
+			templateUrl: '../arquitetura/directives/st-input-text/st-input-text.template.html',
 			link: link,
 			scope: {
 				label: '@',

@@ -8,7 +8,7 @@
 	/*@ngInject*/
 	function SoCrud($log) {
 		var soCrud = {
-			templateUrl: 'arquitetura/directives/st-crud/st-crud.template.html',
+			templateUrl: '../arquitetura/directives/st-crud/st-crud.template.html',
 			restrict: 'E',
 			scope: {
 				titulo: '=',
