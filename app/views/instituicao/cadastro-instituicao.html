@@ -1,0 +1,13 @@
+<st-crud titulo="Cadastro de instituição"
+         tipo="primary">
+    <st-crud-body>
+        <form salvar="vm.salvar()">
+            <div>
+                <st-input-text label="Nome"
+                               ng-model="vm.instituicao.nome"
+                               ng-required="true">
+                </st-input-text>
+            </div>
+        </form>
+    </st-crud-body>
+</st-crud>

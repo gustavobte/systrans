@@ -13,8 +13,17 @@
 			controllerAs: 'vm'
 		};
 
+		const cadastroInstituicao = {
+			name: 'cadastroInstituicao',
+			url: '/cadastro-instituicao',
+			templateUrl: 'app/views/instituicao/cadastro-instituicao.html',
+			controller: 'CadastroInstituicaoController',
+			controllerAs: 'vm'
+		};
+
 		$stateProvider
-			.state('cadastroAluno', cadastroAluno);
+			.state('cadastroAluno', cadastroAluno)
+			.state('cadastroInstituicao', cadastroInstituicao);
 
 	}
 })();

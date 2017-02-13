@@ -30,12 +30,14 @@
 
     <!-- JS Views-->
     <script src="app/views/aluno/cadastro-aluno.controller.js"></script>
+    <script src="app/views/instituicao/cadastro-instituicao.controller.js"></script>
 
     <title>SysOn</title>
 </head>
 <body ng-controller="IndexController as vm">
 <div class="container">
-    <h4 ng-click="vm.alterarRota('cadastroAluno')">Cadastro de aluno</h4>
+    <span ng-click="vm.alterarRota('cadastroAluno')">Cadastro de aluno</span> -
+    <span ng-click="vm.alterarRota('cadastroInstituicao')">Cadastro de instituição</span>
     <ui-view></ui-view>
 </div>
 </body>
