@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="stApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Internos-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+
+    <!-- CSS Externos -->
+
+    <!-- JS Internos -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+
+    <!-- JS Externos Principal-->
+    <script src="app/config/st-app.module.js"></script>
+    <script src="app/config/st.routes.js"></script>
+    <script src="app/controller/index.controller.js"></script>
+
+    <!-- JS Externos Arquitetura -->
+    <script src="arquitetura/directives/st-crud/st-crud.directive.js"></script>
+    <script src="arquitetura/directives/st-input-text/st-input-text.directive.js"></script>
+
+    <!-- JS Views-->
+    <script src="app/views/aluno/cadastro-aluno.controller.js"></script>
+
+    <title>SysOn</title>
+</head>
+<body ng-controller="IndexController as vm">
+<div class="container">
+    <h4 ng-click="vm.alterarRota('cadastroAluno')">Cadastro de aluno</h4>
+    <ui-view></ui-view>
+</div>
+</body>
+</html>

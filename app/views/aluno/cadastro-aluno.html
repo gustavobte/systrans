@@ -1,0 +1,150 @@
+<!--<form name="formProduto" novalidate ng-submit="vm.salvar()">-->
+<!--<div class="panel panel-primary">-->
+<!--<div class="panel-heading">-->
+<!--<span ng-bind="vm.titulo"></span>-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<div class="row">-->
+<!--<div class="col-md-6">-->
+<!--<div class="form-group"-->
+<!--ng-class="{'has-error':formProduto.descricao.$invalid && formProduto.descricao.$touched}">-->
+<!--<label for="descricao">Classificação</label>-->
+<!--<input id="descricao"-->
+<!--type="text"-->
+<!--class="form-control"-->
+<!--ng-model="vm.produto.descricao" ,-->
+<!--name="descricao"-->
+<!--required>-->
+<!--<div class="help-block"-->
+<!--ng-messages="formProduto.descricao.$error"-->
+<!--ng-if="formProduto.descricao.$invalid && formProduto.descricao.$touched">-->
+<!--<div ng-messages-include="app/templates/ng-messages.html"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<div class="form-group"-->
+<!--ng-class="{'has-error':formProduto.descricao.$invalid && formProduto.descricao.$touched}">-->
+<!--<label for="descricao">Solicitante</label>-->
+<!--<input id="solicitante"-->
+<!--type="text"-->
+<!--class="form-control"-->
+<!--ng-model="vm.produto.descricao" ,-->
+<!--name="descricao"-->
+<!--required>-->
+<!--<div class="help-block"-->
+<!--ng-messages="formProduto.descricao.$error"-->
+<!--ng-if="formProduto.descricao.$invalid && formProduto.descricao.$touched">-->
+<!--<div ng-messages-include="app/templates/ng-messages.html"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<div class="form-group"-->
+<!--ng-class="{'has-error':formProduto.descricao.$invalid && formProduto.descricao.$touched}">-->
+<!--<label for="departamento">Departamento</label>-->
+<!--<input id="departamento"-->
+<!--type="text"-->
+<!--class="form-control"-->
+<!--ng-model="vm.produto.descricao" ,-->
+<!--name="descricao"-->
+<!--required>-->
+<!--<div class="help-block"-->
+<!--ng-messages="formProduto.descricao.$error"-->
+<!--ng-if="formProduto.descricao.$invalid && formProduto.descricao.$touched">-->
+<!--<div ng-messages-include="app/templates/ng-messages.html"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<div class="form-group"-->
+<!--ng-class="{'has-error':formProduto.descricao.$invalid && formProduto.descricao.$touched}">-->
+<!--<label for="observacoes">Observações</label>-->
+<!--<textarea id="observacoes"-->
+<!--type="text"-->
+<!--class="form-control"-->
+<!--ng-model="vm.produto.descricao"-->
+<!--name="descricao"-->
+<!--required>-->
+<!--</textarea>-->
+<!--<div class="help-block"-->
+<!--ng-messages="formProduto.descricao.$error"-->
+<!--ng-if="formProduto.descricao.$invalid && formProduto.descricao.$touched">-->
+<!--<div ng-messages-include="app/templates/ng-messages.html"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--<div class="col-md-12">-->
+<!--<button class="btn btn-primary">Anexar documentos</button>-->
+<!--<table class="table table-striped">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>Data do anexo</th>-->
+<!--<th>Descrição</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td>oi</td>-->
+<!--<td>oi</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>oi</td>-->
+<!--<td>oi</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>oi</td>-->
+<!--<td>oi</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="panel-footer">-->
+<!--<button class="btn btn-primary" type="submit">Salvar</button>-->
+<!--<button class="btn btn-warning" type="button" ng-click="vm.limpar()">Limpar</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</form>-->
+<st-crud titulo="Cadastro de aluno"
+         tipo="primary">
+    <st-crud-body>
+        <form salvar="vm.salvar()">
+            <div>
+                <st-input-text label="Nome"
+                               ng-model="vm.aluno.nome"
+                               ng-required="true">
+                </st-input-text>
+
+                <st-input-text label="Responsável"
+                               ng-model="vm.aluno.responsavel"
+                               ng-required="true">
+                </st-input-text>
+
+                <st-input-text label="CPF Responsável"
+                               ng-model="vm.aluno.cpfResponsavel"
+                               ng-required="true">
+                </st-input-text>
+
+                <st-input-text label="Telefone"
+                               ng-model="vm.aluno.telefone"
+                               ng-required="true">
+                </st-input-text>
+
+                <st-input-text label="Instituição"
+                               ng-model="vm.aluno.instituicao"
+                               ng-required="true">
+                </st-input-text>
+
+                <st-input-text label="Turno"
+                               tamanho-maximo="1"
+                               ng-model="vm.aluno.turno"
+                               ng-required="true">
+                </st-input-text>
+            </div>
+        </form>
+    </st-crud-body>
+</st-crud>
