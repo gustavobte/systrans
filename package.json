@@ -19,6 +19,7 @@
     "angular-toastr": "v2.1.1",
     "angular-ui-grid": "^4.0.2",
     "angular-ui-router": "v0.4.2",
+    "angularfire": "^2.3.0",
     "bootstrap": "v3.3.7",
     "jquery": "v3.1.1",
     "material-design-icons": "^3.0.1",

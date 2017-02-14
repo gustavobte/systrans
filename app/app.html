@@ -33,7 +33,8 @@
     <script src="../node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
     <script src="../node_modules/materialize-css/bin/materialize.js"></script>
     <script src="../node_modules/angular-material-sidemenu/dest/angular-material-sidemenu.js"></script>
-
+    <script src="../node_modules/firebase/firebase.js"></script>
+    <script src="../node_modules/angularfire/dist/angularfire.min.js"></script>
 
 
     <!-- JS Externos Principal-->
@@ -55,6 +56,18 @@
     <script src="controller/index.controller.js"></script>
     <script src="views/aluno/pesquisa-aluno.controller.js"></script>
     <script src="views/instituicao/pesquisa-instituicao.controller.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB8pZpodatiY9EMmKB6TMwlECHh3u4psQI",
+            authDomain: "systrans-d98c3.firebaseapp.com",
+            databaseURL: "https://systrans-d98c3.firebaseio.com",
+            storageBucket: "systrans-d98c3.appspot.com",
+            messagingSenderId: "24917063172"
+        };
+        firebase.initializeApp(config);
+    </script>
 
 </head>
 <body ng-controller="IndexController as vm" ng-cloak>
