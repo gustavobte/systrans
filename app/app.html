@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>:: Systrans ::</title>
     <!-- CSS Internos-->
     <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" href="../node_modules/angular-toastr/dist/angular-toastr.css">
@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="../node_modules/angular-ui-grid/ui-grid.css">
     <link rel="stylesheet" href="views/login/materialize.css">
     <link rel="stylesheet" href="../node_modules/material-design-icons/iconfont/material-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="../node_modules/angular-material-sidemenu/dest/angular-material-sidemenu.css">
+
+
 
     <!-- CSS Externos -->
 
@@ -27,6 +32,9 @@
     <script src="../node_modules/angular-ui-grid/ui-grid.js"></script>
     <script src="../node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
     <script src="../node_modules/materialize-css/bin/materialize.js"></script>
+    <script src="../node_modules/angular-material-sidemenu/dest/angular-material-sidemenu.js"></script>
+
+
 
     <!-- JS Externos Principal-->
     <script src="config/st-app.module.js"></script>
@@ -49,15 +57,17 @@
     <script src="views/instituicao/pesquisa-instituicao.controller.js"></script>
 
 </head>
-<body ng-controller="IndexController as vm">
+<body ng-controller="IndexController as vm" ng-cloak>
 
 <nav class="navbar navbar-light bg-faded indigo darken-4">
+    <a href="#/dashboard-app" class="brand-logo center">Systrans</a>
     <div class="collapse" id="exCollapsingNavbar">
         <md-button class="md-icon-button" aria-label="Side Panel" ng-click="vm.openSideNavPanel()">
             <md-tooltip>Menu</md-tooltip>
             <md-icon class="white-text material-icons">&#xE5D2;</md-icon>
         </md-button>
     </div>
+
 </nav>
 <div class="row">
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
@@ -75,41 +85,32 @@
 
         <md-content>
             <md-list>
-                <md-subheader class="md-no-sticky">Protótipo</md-subheader>
-                <md-list-item ng-click="vm.alterarRota('dashboardApp')">
-                    <md-icon class="material-icons">&#xE1AF;</md-icon>
-                    <p>Dashboard</p>
-                </md-list-item>
-                <md-list-item ng-click="vm.alterarRota('cadastroAluno')">
-                    <md-icon class="material-icons">chrome_reader_mode</md-icon>
-                    <p>Cadastro de Aluno</p>
-                    <md-icon class="md-secondary">2</md-icon>
-                </md-list-item>
-                <md-list-item ng-click="vm.alterarRota('cadastroInstituicao')">
-                    <md-icon class="material-icons">find_in_page</md-icon>
-                    <p>Cadastro de Instituição</p>
-                    <md-icon class="md-secondary">2</md-icon>
-                </md-list-item>
-                <md-list-item ng-click="vm.alterarRota('pesquisaAluno')">
-                    <md-icon class="material-icons">find_in_page</md-icon>
-                    <p>Pesquisa Aluno</p>
-                    <md-icon class="md-secondary">2</md-icon>
-                </md-list-item>
-                <md-list-item ng-click="vm.alterarRota('pesquisaInstituicao')">
-                    <md-icon class="material-icons">find_in_page</md-icon>
-                    <p>Pesquisa Instituição</p>
-                    <md-icon class="md-secondary">2</md-icon>
-                </md-list-item>
-
+                <md-sidemenu locked="true">
+                    <md-sidemenu-group>
+                    </md-sidemenu-group>
+                    <md-sidemenu-group>
+                        <md-subheader class="md-no-sticky">Menu</md-subheader>
+                        <md-sidemenu-content ng-click="vm.alterarRota('dashboardApp')" md-icon="&#xE1AF;" md-heading="Dashboard" >
+                        </md-sidemenu-content>
+                        <md-sidemenu-content md-icon="supervisor_account" md-heading="Aluno" md-arrow="true">
+                            <md-sidemenu-button ng-click="vm.alterarRota('cadastroAluno')">Cadastro de Aluno</md-sidemenu-button>
+                            <md-sidemenu-button ng-click="vm.alterarRota('pesquisaAluno')">Pesquisar Aluno</md-sidemenu-button>
+                        </md-sidemenu-content>
+                    </md-sidemenu-group>
+                    <md-sidemenu-group>
+                        <md-sidemenu-content md-icon="account_balance" md-heading="Faculdade" md-arrow="true">
+                            <md-sidemenu-button ng-click="vm.alterarRota('cadastroInstituicao')">Cadastro de Faculdade</md-sidemenu-button>
+                            <md-sidemenu-button ng-click="vm.alterarRota('pesquisaInstituicao')">Pesquisar Faculdade</md-sidemenu-button>
+                        </md-sidemenu-content>
+                    </md-sidemenu-group>
+                </md-sidemenu>
             </md-list>
         </md-content>
     </md-sidenav>
 </div>
 
-
 <ui-view>
 </ui-view>
-
 
 </body>
 </html>
