@@ -19,7 +19,7 @@
 		}
 
 		function postSalvar() {
-			console.log('Faz alguma coisa depois de salvar')
+			console.log('Faz alguma coisa depois de salvar');
 		}
 	}
 

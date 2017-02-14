@@ -15,6 +15,12 @@
         vm.showMobileMainHeader = true;
 		vm.alterarRota = alterarRota;
 
+		init('dashboardApp');
+
+		function init(rota) {
+			$state.go(rota);
+		}
+
 		function alterarRota(rota) {
 			$state.go(rota);
             closeSideNavPanel();

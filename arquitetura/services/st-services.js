@@ -22,15 +22,17 @@
 			self.limpar = limpar;
 
 			function salvar() {
-				if (typeof self.preSalvar === "function") {
-					self.preSalvar();
-				}
+				executaFuncao(self.preSalvar);
 				self.entidades.push(self.entidade);
 				StStorageService.set(self.nomeKey, self.entidades);
 				StAlertService.showSuccess("Registro salvo com sucesso !");
 				self.limpar();
-				if (typeof self.postSalvar === "function") {
-					self.postSalvar();
+				executaFuncao(self.postSalvar);
+			}
+
+			function executaFuncao(funcao) {
+				if (typeof funcao === "function") {
+					funcao();
 				}
 			}
 
